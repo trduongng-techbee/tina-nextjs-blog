@@ -24,6 +24,7 @@ export default defineConfig({
         name: "post",
         label: "Posts",
         path: "content/posts",
+        format: "md",
         fields: [
           {
             type: "string",
@@ -31,6 +32,18 @@ export default defineConfig({
             label: "Title",
             isTitle: true,
             required: true,
+          },
+          {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+            required: true,
+          },
+          {
+            label: "Tags",
+            name: "tags",
+            type: "string",
+            list: true,
           },
           {
             type: "rich-text",
